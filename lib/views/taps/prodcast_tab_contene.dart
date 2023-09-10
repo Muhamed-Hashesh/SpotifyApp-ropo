@@ -43,7 +43,7 @@ class ProdcastContent extends StatelessWidget {
         ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: podcastCardList.length,
+          itemCount: 4,
           itemBuilder: (context, index) => Padding(
             padding: const EdgeInsets.only(bottom: 5),
             child: TopLeadingCard(card: podcastCardList[index]),
@@ -57,6 +57,27 @@ class ProdcastContent extends StatelessWidget {
           //     alignment: Alignment.center,
           //   child: TopLeadingCard()),
         ),
+        const SizedBox(height: 20),
+        Align(
+          alignment: Alignment.center,
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const AllPodcasts();
+              }));
+            },
+            child: const CircleAvatar(
+              backgroundColor: cIconBackgroundColor,
+              radius: 30,
+              child: Icon(
+                Icons.more_horiz,
+                color: cBlack,
+                size: 30,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 50),
       ],
     );
   }

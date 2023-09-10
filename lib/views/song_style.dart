@@ -14,6 +14,7 @@ class SongStyle extends StatefulWidget {
 }
 
 class _SongStyleState extends State<SongStyle> {
+  var value = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,12 +81,35 @@ class _SongStyleState extends State<SongStyle> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(24),
+            padding: const EdgeInsets.symmetric(vertical: 24),
             child: Container(
                 alignment: Alignment.center,
                 height: MediaQuery.sizeOf(context).height / 6.5,
-                child: const Text(
-                    "لما اوصل للـ API بقا وعلينا بخير او widget جاهزة")),
+                child: Column(
+                  children: [
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        trackHeight: 2, // تعيين ارتفاع المسار
+                        thumbShape: const RoundSliderThumbShape(
+                            enabledThumbRadius: 6), // تعيين شكل الإبهام
+                      ),
+                      child: Slider(
+                        activeColor: const Color(0XFF535353),
+                        inactiveColor: const Color(0XFFA7A7A7),
+                        min: 0,
+                        max: 100,
+                        value: value,
+                        onChanged: (val) {
+                          setState(() {
+                            value = val;
+                          });
+                        },
+                      ),
+                    ),
+                    // const Text(
+                    //     "لما اوصل للـ API بقا وعلينا بخير او widget جاهزة"),
+                  ],
+                )),
           ),
           GestureDetector(
             onTap: () {

@@ -88,7 +88,7 @@ class _ModeAdnContinuePageState extends State<ModeAdnContinuePage> {
                     child: ButtonModel(
                       text: "Continue",
                       ontap: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                             builder: (context) {

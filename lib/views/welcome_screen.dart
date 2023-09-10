@@ -6,7 +6,6 @@ import 'package:spotify_app/widgets/text_button_widget.dart';
 import 'package:spotify_app/views/authentication/signin_page.dart';
 // import 'package:spotify_app/views/mode_and_continue_page.dart';
 // import 'package:spotify_app/views/welcome_screen.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -21,24 +20,24 @@ class WelcomeScreen extends StatelessWidget {
         toolbarHeight: 120,
         backgroundColor: cBackgroundColor,
         elevation: 0,
-        leadingWidth: 100,
-        leading: Align(
-          alignment: Alignment.center,
-          child: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: const CircleAvatar(
-              backgroundColor: cIconBackgroundColor,
-              radius: 25,
-              child: Icon(
-                IconlyLight.arrowLeft2,
-                color: cBlack,
-                size: 20,
-              ),
-            ),
-          ),
-        ),
+        // leadingWidth: 100,
+        // leading: Align(
+        //   alignment: Alignment.center,
+        //   child: InkWell(
+        //     onTap: () {
+        //       Navigator.pop(context);
+        //     },
+        //     child: const CircleAvatar(
+        //       backgroundColor: cIconBackgroundColor,
+        //       radius: 25,
+        //       child: Icon(
+        //         IconlyLight.arrowLeft2,
+        //         color: cBlack,
+        //         size: 20,
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ),
       body: Stack(
         fit: StackFit.expand,
@@ -101,7 +100,7 @@ class WelcomeScreen extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
@@ -130,7 +129,7 @@ class WelcomeScreen extends StatelessWidget {
                             ),
                             TextButtonTransparent(
                               ontap: () {
-                                Navigator.push(
+                                Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {

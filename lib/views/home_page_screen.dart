@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:spotify_app/constants.dart';
+import 'package:spotify_app/views/taps/artist_tab_content.dart';
 import 'package:spotify_app/views/taps/news_tab_content.dart';
 import 'package:spotify_app/views/taps/prodcast_tab_contene.dart';
+import 'package:spotify_app/views/taps/video_tap_content.dart';
 import 'package:spotify_app/widgets/top_card_widget.dart';
 
 class HomePageSreen extends StatefulWidget {
@@ -15,20 +17,20 @@ class HomePageSreen extends StatefulWidget {
 class _HomePageSreenState extends State<HomePageSreen> {
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 4,
       child: Scaffold(
         backgroundColor: cBackgroundColor,
-        appBar: const PreferredSize(
+        appBar: PreferredSize(
           preferredSize: Size.fromHeight(110),
           child: AppbarCustomized(),
         ),
         body: Column(
           children: [
-            const TopLeadingCardtop(),
+            TopLeadingCardtop(),
 
-            const SizedBox(height: 16),
-            const TabBar(
+            SizedBox(height: 16),
+            TabBar(
               unselectedLabelColor: Color(0XFFA5A5A5),
               labelColor: cButtonColor,
               indicatorColor: cButtonColor,
@@ -90,14 +92,10 @@ class _HomePageSreenState extends State<HomePageSreen> {
             Expanded(
               child: TabBarView(
                 children: [
-                  const NewsContent(),
-                  Container(
-                    color: Colors.black,
-                  ),
-                  Container(
-                    color: cButtonColor,
-                  ),
-                  const ProdcastContent(),
+                  NewsContent(),
+                  VideoContent(),
+                  ArtistContent(),
+                  ProdcastContent(),
                 ],
               ),
             ),

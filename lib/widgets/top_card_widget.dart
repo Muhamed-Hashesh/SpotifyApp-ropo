@@ -14,7 +14,7 @@ class TopLeadingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 1),
       child: Stack(
         children: [
           Container(
