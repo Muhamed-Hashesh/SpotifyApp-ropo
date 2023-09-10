@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:spotify_app/constants.dart';
-import 'package:spotify_app/models/top_card_model.dart';
 import 'package:spotify_app/models/video_grid_model.dart';
 import 'package:spotify_app/views/home_page_screen.dart';
 import 'package:spotify_app/widgets/video_card.dart';

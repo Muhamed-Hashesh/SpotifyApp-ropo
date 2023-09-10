@@ -1,6 +1,11 @@
 # spotify_app
 
-A new Flutter project.
+- 👋 Hi, I’m @Muhamed-Hashesh
+- 📫 How to reach me :
+- [Facebook](https://www.facebook.com/mohammed.hashesh.503/)
+- [WhatsApp](https://wa.me/201065122813?text=Hello+from_GitHub)
+
+A new Flutter project "Spotify App Project"
 
 ## Getting Started
 

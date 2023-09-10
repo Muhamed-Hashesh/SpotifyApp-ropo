@@ -106,6 +106,34 @@ class _SongStyleState extends State<SongStyle> {
                         },
                       ),
                     ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.skip_previous,
+                            size: 35,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            child: CircleAvatar(
+                              backgroundColor: cButtonColor,
+                              radius: 40,
+                              child: Icon(
+                                Icons.pause_outlined,
+                                size: 40,
+                                color: cWhite,
+                              ),
+                            ),
+                          ),
+                          Icon(
+                            Icons.skip_next,
+                            size: 35,
+                          ),
+                        ],
+                      ),
+                    )
                     // const Text(
                     //     "لما اوصل للـ API بقا وعلينا بخير او widget جاهزة"),
                   ],
